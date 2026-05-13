@@ -16,39 +16,39 @@ import java.sql.Statement;
 @Singleton
 public class DatabaseInitializer {
 
-    private static final Logger logger = LoggerFactory.getLogger(DatabaseInitializer.class);
-    private final DatabaseConnection dbConnection;
+  private static final Logger logger = LoggerFactory.getLogger(DatabaseInitializer.class);
+  private final DatabaseConnection dbConnection;
 
-    @Inject
-    public DatabaseInitializer(DatabaseConnection dbConnection) {
-        this.dbConnection = dbConnection;
-    }
+  @Inject
+  public DatabaseInitializer(DatabaseConnection dbConnection) {
+    this.dbConnection = dbConnection;
+  }
 
-    /**
-     * створює таблиці (якщо не існують) та вставляє початкові дані
-     */
+  public void initialize() {
+    logger.info("Ініціалізація схеми бази даних...");
+    Connection conn = null;
+    try {
+      conn = dbConnection.getConnection();
+      conn.setAutoCommit(false);
 
-    public void initialize() {
-      logger.info("Ініціалізація схеми бази даних...");
-      Connection conn = null;
-      try {
-        conn = dbConnection.getConnection();
-        conn.setAutoCommit(true); // ← змінити з false на true
+      createTables(conn);
+      seedData(conn);
 
-        createTables(conn);
-        seedData(conn);
-
-        logger.info("Схема та початкові дані успішно ініціалізовано.");
-      } catch (SQLException e) {
-        logger.error("Помилка ініціалізації БД: {}", e.getMessage(), e);
-      } finally {
-        dbConnection.releaseConnection(conn);
+      conn.commit();
+      logger.info("Схема та початкові дані успішно ініціалізовано.");
+    } catch (SQLException e) {
+      logger.error("Помилка ініціалізації БД: {}", e.getMessage(), e);
+      if (conn != null) {
+        try { conn.rollback(); } catch (SQLException ex) { logger.error("Rollback failed", ex); }
       }
+    } finally {
+      dbConnection.releaseConnection(conn);
     }
+  }
 
-    private void createTables(Connection conn) throws SQLException {
-        try (Statement stmt = conn.createStatement()) {
-            stmt.execute("""
+  private void createTables(Connection conn) throws SQLException {
+    try (Statement stmt = conn.createStatement()) {
+      stmt.execute("""
                 CREATE TABLE IF NOT EXISTS users (
                     id          INTEGER PRIMARY KEY AUTOINCREMENT,
                     username    TEXT    NOT NULL UNIQUE,
@@ -60,8 +60,7 @@ public class DatabaseInitializer {
                 )
             """);
 
-
-            stmt.execute("""
+      stmt.execute("""
                 CREATE TABLE IF NOT EXISTS categories (
                     id          INTEGER PRIMARY KEY AUTOINCREMENT,
                     name        TEXT    NOT NULL UNIQUE,
@@ -69,8 +68,7 @@ public class DatabaseInitializer {
                 )
             """);
 
-
-            stmt.execute("""
+      stmt.execute("""
                 CREATE TABLE IF NOT EXISTS phone_models (
                     id           INTEGER PRIMARY KEY AUTOINCREMENT,
                     brand        TEXT    NOT NULL,
@@ -81,8 +79,7 @@ public class DatabaseInitializer {
                 )
             """);
 
-
-            stmt.execute("""
+      stmt.execute("""
                 CREATE TABLE IF NOT EXISTS designs (
                     id           INTEGER PRIMARY KEY AUTOINCREMENT,
                     name         TEXT    NOT NULL,
@@ -98,8 +95,7 @@ public class DatabaseInitializer {
                 )
             """);
 
-
-            stmt.execute("""
+      stmt.execute("""
                 CREATE TABLE IF NOT EXISTS design_compatibility (
                     design_id      INTEGER NOT NULL,
                     phone_model_id INTEGER NOT NULL,
@@ -109,8 +105,7 @@ public class DatabaseInitializer {
                 )
             """);
 
-
-            stmt.execute("""
+      stmt.execute("""
                 CREATE TABLE IF NOT EXISTS orders (
                     id             INTEGER PRIMARY KEY AUTOINCREMENT,
                     user_id        INTEGER NOT NULL,
@@ -119,6 +114,8 @@ public class DatabaseInitializer {
                     quantity       INTEGER NOT NULL DEFAULT 1,
                     total_price    REAL    NOT NULL,
                     status         TEXT    NOT NULL DEFAULT 'PENDING',
+                    phone_number   TEXT,
+                    address        TEXT,
                     order_date     TEXT    NOT NULL DEFAULT (datetime('now')),
                     FOREIGN KEY (user_id)        REFERENCES users(id)        ON DELETE RESTRICT,
                     FOREIGN KEY (design_id)      REFERENCES designs(id)      ON DELETE RESTRICT,
@@ -126,14 +123,11 @@ public class DatabaseInitializer {
                 )
             """);
 
-
-            stmt.execute("CREATE INDEX IF NOT EXISTS idx_designs_category ON designs(category_id)");
-            stmt.execute("CREATE INDEX IF NOT EXISTS idx_designs_created_by ON designs(created_by)");
-            stmt.execute("CREATE INDEX IF NOT EXISTS idx_orders_user ON orders(user_id)");
-            stmt.execute("CREATE INDEX IF NOT EXISTS idx_orders_status ON orders(status)");
-
-
-            stmt.execute("""
+      stmt.execute("CREATE INDEX IF NOT EXISTS idx_designs_category ON designs(category_id)");
+      stmt.execute("CREATE INDEX IF NOT EXISTS idx_designs_created_by ON designs(created_by)");
+      stmt.execute("CREATE INDEX IF NOT EXISTS idx_orders_user ON orders(user_id)");
+      stmt.execute("CREATE INDEX IF NOT EXISTS idx_orders_status ON orders(status)");
+      stmt.execute("""
                 CREATE VIEW IF NOT EXISTS v_design_details AS
                     SELECT d.id, d.name, d.description, d.price, d.is_available,
                            c.name AS category_name,
@@ -144,8 +138,7 @@ public class DatabaseInitializer {
                     JOIN users u      ON d.created_by  = u.id
             """);
 
-
-            stmt.execute("""
+      stmt.execute("""
                 CREATE VIEW IF NOT EXISTS v_order_stats AS
                     SELECT o.id, u.username, d.name AS design_name,
                            pm.brand || ' ' || pm.model_name AS phone_model,
@@ -156,21 +149,20 @@ public class DatabaseInitializer {
                     JOIN phone_models pm ON o.phone_model_id = pm.id
             """);
 
-            logger.info("DDL виконано успішно.");
-        }
+      logger.info("DDL виконано успішно.");
     }
+  }
 
-    private void seedData(Connection conn) throws SQLException {
-        try (Statement stmt = conn.createStatement()) {
-            var rs = stmt.executeQuery("SELECT COUNT(*) FROM users");
-            rs.next();
-            if (rs.getInt(1) > 0) {
-                logger.info("Тестові дані вже існують — пропускаємо seed.");
-                return;
-            }
+  private void seedData(Connection conn) throws SQLException {
+    try (Statement stmt = conn.createStatement()) {
+      var rs = stmt.executeQuery("SELECT COUNT(*) FROM users");
+      rs.next();
+      if (rs.getInt(1) > 0) {
+        logger.info("Тестові дані вже існують — пропускаємо seed.");
+        return;
+      }
 
-
-            stmt.execute("""
+      stmt.execute("""
                 INSERT INTO users (username, password, email, role) VALUES
                     ('admin',  '$2a$10$admin_hash_placeholder',   'admin@phonecase.ua',  'ADMIN'),
                     ('ivan',   '$2a$10$user1_hash_placeholder',   'ivan@gmail.com',      'USER'),
@@ -184,8 +176,7 @@ public class DatabaseInitializer {
                     ('taras',  '$2a$10$user9_hash_placeholder',   'taras@gmail.com',     'USER')
             """);
 
-
-            stmt.execute("""
+      stmt.execute("""
                 INSERT INTO categories (name, description) VALUES
                     ('Природа',    'Дизайни з природними мотивами'),
                     ('Абстракція', 'Абстрактні геометричні дизайни'),
@@ -197,8 +188,7 @@ public class DatabaseInitializer {
                     ('Фото',       'Реалістичні фотографічні принти')
             """);
 
-
-            stmt.execute("""
+      stmt.execute("""
                 INSERT INTO phone_models (brand, model_name, screen_size, release_year) VALUES
                     ('Apple',   'iPhone 15 Pro',    6.1, 2023),
                     ('Apple',   'iPhone 15',        6.1, 2023),
@@ -214,8 +204,7 @@ public class DatabaseInitializer {
                     ('Huawei',  'P60 Pro',          6.67,2023)
             """);
 
-
-            stmt.execute("""
+      stmt.execute("""
                 INSERT INTO designs (name, description, category_id, price, is_available, created_by) VALUES
                     ('Горний захід',    'Пейзаж гірського заходу сонця',       1, 249.99, 1, 1),
                     ('Морські хвилі',  'Динамічний дизайн океанських хвиль',  1, 199.99, 1, 1),
@@ -234,8 +223,7 @@ public class DatabaseInitializer {
                     ('Гірські озера',  'Фото гірських озер Карпат',          8, 289.99, 0, 1)
             """);
 
-
-            stmt.execute("""
+      stmt.execute("""
                 INSERT INTO design_compatibility (design_id, phone_model_id) VALUES
                     (1,1),(1,2),(1,3),(1,4),(1,5),
                     (2,1),(2,2),(2,4),(2,5),(2,9),
@@ -254,8 +242,7 @@ public class DatabaseInitializer {
                     (15,1),(15,2),(15,3)
             """);
 
-
-            stmt.execute("""
+      stmt.execute("""
                 INSERT INTO orders (user_id, design_id, phone_model_id, quantity, total_price, status) VALUES
                     (2,  1, 1, 1, 249.99, 'COMPLETED'),
                     (2,  5, 2, 2, 699.98, 'COMPLETED'),
@@ -279,7 +266,7 @@ public class DatabaseInitializer {
                     (9,  5, 1, 1, 349.99, 'COMPLETED')
             """);
 
-            logger.info("DML: тестові дані вставлено успішно.");
-        }
+      logger.info("DML: тестові дані вставлено (COMMIT буде виконано зовні).");
     }
+  }
 }

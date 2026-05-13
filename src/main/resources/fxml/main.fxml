@@ -3,121 +3,121 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 <BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.phonecase.ui.controller.MainController"
-            styleClass="root-container">
+  fx:controller="com.phonecase.ui.controller.MainController"
+  styleClass="root-container">
 
+  <top>
+    <HBox styleClass="top-bar" alignment="CENTER_LEFT" spacing="15">
+      <padding><Insets top="10" right="20" bottom="10" left="20"/></padding>
+      <Label text="📱 PhoneCase Manager" styleClass="app-title-small"/>
+      <Region HBox.hgrow="ALWAYS"/>
+      <VBox alignment="CENTER_RIGHT">
+        <Label fx:id="welcomeLabel" styleClass="welcome-label"/>
+        <Label fx:id="roleLabel" styleClass="role-label"/>
+      </VBox>
+      <Button text="🚪 Вийти" onAction="#handleLogout" styleClass="logout-button"/>
+    </HBox>
+  </top>
 
-    <top>
-        <HBox styleClass="top-bar" alignment="CENTER_LEFT" spacing="15">
-            <padding><Insets top="10" right="20" bottom="10" left="20"/></padding>
-            <Label text="📱 PhoneCase Manager" styleClass="app-title-small"/>
-            <Region HBox.hgrow="ALWAYS"/>
-            <VBox alignment="CENTER_RIGHT">
-                <Label fx:id="welcomeLabel" styleClass="welcome-label"/>
-                <Label fx:id="roleLabel" styleClass="role-label"/>
-            </VBox>
-            <Button text="🚪 Вийти" onAction="#handleLogout" styleClass="logout-button"/>
-        </HBox>
-    </top>
-
-
-    <top>
-        <VBox>
-            <HBox styleClass="top-bar" alignment="CENTER_LEFT" spacing="15">
-                <padding><Insets top="10" right="20" bottom="10" left="20"/></padding>
-                <Label text="📱 PhoneCase Manager" styleClass="app-title-small"/>
-                <Region HBox.hgrow="ALWAYS"/>
-                <VBox alignment="CENTER_RIGHT">
-                    <Label fx:id="welcomeLabel" styleClass="welcome-label"/>
-                    <Label fx:id="roleLabel" styleClass="role-label"/>
-                </VBox>
-                <Button text="🚪 Вийти" onAction="#handleLogout" styleClass="logout-button"/>
-            </HBox>
-
-            <HBox spacing="15" alignment="CENTER" styleClass="stats-bar">
-                <padding><Insets top="10" right="20" bottom="10" left="20"/></padding>
-                <VBox styleClass="stat-card" alignment="CENTER">
-                    <Label text="Дизайнів" styleClass="stat-label"/>
-                    <Label fx:id="lblTotalDesigns" text="0" styleClass="stat-value"/>
-                </VBox>
-                <VBox styleClass="stat-card" alignment="CENTER">
-                    <Label text="Замовлень" styleClass="stat-label"/>
-                    <Label fx:id="lblTotalOrders" text="0" styleClass="stat-value"/>
-                </VBox>
-                <VBox styleClass="stat-card" alignment="CENTER">
-                    <Label text="Виручка" styleClass="stat-label"/>
-                    <Label fx:id="lblTotalRevenue" text="0.00 грн" styleClass="stat-value"/>
-                </VBox>
-                <VBox styleClass="stat-card" alignment="CENTER">
-                    <Label text="Очікують" styleClass="stat-label"/>
-                    <Label fx:id="lblPendingOrders" text="0" styleClass="stat-value"/>
-                </VBox>
-            </HBox>
+  <top>
+    <VBox>
+      <HBox styleClass="top-bar" alignment="CENTER_LEFT" spacing="15">
+        <padding><Insets top="10" right="20" bottom="10" left="20"/></padding>
+        <Label text="📱 PhoneCase Manager" styleClass="app-title-small"/>
+        <Region HBox.hgrow="ALWAYS"/>
+        <VBox alignment="CENTER_RIGHT">
+          <Label fx:id="welcomeLabel" styleClass="welcome-label"/>
+          <Label fx:id="roleLabel" styleClass="role-label"/>
         </VBox>
-    </top>
+        <Button text="🚪 Вийти" onAction="#handleLogout" styleClass="logout-button"/>
+      </HBox>
+      <HBox spacing="15" alignment="CENTER" styleClass="stats-bar">
+        <padding><Insets top="10" right="20" bottom="10" left="20"/></padding>
+        <VBox styleClass="stat-card" alignment="CENTER">
+          <Label text="Дизайнів" styleClass="stat-label"/>
+          <Label fx:id="lblTotalDesigns" text="0" styleClass="stat-value"/>
+        </VBox>
+        <VBox styleClass="stat-card" alignment="CENTER">
+          <Label text="Замовлень" styleClass="stat-label"/>
+          <Label fx:id="lblTotalOrders" text="0" styleClass="stat-value"/>
+        </VBox>
+        <VBox styleClass="stat-card" alignment="CENTER">
+          <Label text="Виручка" styleClass="stat-label"/>
+          <Label fx:id="lblTotalRevenue" text="0.00 грн" styleClass="stat-value"/>
+        </VBox>
+        <VBox styleClass="stat-card" alignment="CENTER">
+          <Label text="Очікують" styleClass="stat-label"/>
+          <Label fx:id="lblPendingOrders" text="0" styleClass="stat-value"/>
+        </VBox>
+      </HBox>
+    </VBox>
+  </top>
 
+  <center>
+    <TabPane fx:id="mainTabPane" tabClosingPolicy="UNAVAILABLE" styleClass="main-tabs">
+      <Tab text="🎨 Дизайни">
+        <VBox spacing="10">
+          <padding><Insets top="10" right="15" bottom="10" left="15"/></padding>
 
-    <center>
-        <TabPane fx:id="mainTabPane" tabClosingPolicy="UNAVAILABLE" styleClass="main-tabs">
+          <HBox spacing="10" alignment="CENTER_LEFT">
+            <TextField fx:id="searchField" promptText="🔍 Пошук за назвою..." prefWidth="250"/>
+            <ComboBox fx:id="categoryFilter" prefWidth="180"/>
+            <Button text="🔍 Шукати" onAction="#handleSearch" styleClass="secondary-button"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button fx:id="btnAddDesign" text="➕ Додати" onAction="#handleAddDesign" styleClass="primary-button"/>
+            <Button fx:id="btnEditDesign" text="✏ Редагувати" onAction="#handleEditDesign" styleClass="secondary-button"/>
+            <Button fx:id="btnDeleteDesign" text="🗑 Видалити" onAction="#handleDeleteDesign" styleClass="danger-button"/>
+            <Button fx:id="btnExportDesigns" text="📊 Експорт Excel" onAction="#handleExportDesigns" styleClass="export-button"/>
+            <Button text="🔄 Оновити" onAction="#handleRefresh" styleClass="secondary-button"/>
+          </HBox>
 
+          <TableView fx:id="designsTable" VBox.vgrow="ALWAYS">
+            <columns>
+              <TableColumn fx:id="colDesignId" text="ID" prefWidth="50"/>
+              <TableColumn fx:id="colDesignName" text="Назва" prefWidth="200"/>
+              <TableColumn fx:id="colDesignCategory" text="Категорія" prefWidth="150"/>
+              <TableColumn fx:id="colDesignPrice" text="Ціна (грн)" prefWidth="120"/>
+              <TableColumn fx:id="colDesignAvailable" text="Доступний" prefWidth="100"/>
+            </columns>
+          </TableView>
+        </VBox>
+      </Tab>
 
-            <Tab text="🎨 Дизайни">
-                <VBox spacing="10">
-                    <padding><Insets top="10" right="15" bottom="10" left="15"/></padding>
+      <Tab text="📦 Замовлення">
+        <VBox spacing="10">
+          <padding><Insets top="10" right="15" bottom="10" left="15"/></padding>
 
+          <HBox spacing="10" alignment="CENTER_LEFT">
+            <ComboBox fx:id="statusFilter" prefWidth="180"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Button text="🛒 Замовити" onAction="#handleCreateOrder" styleClass="primary-button"/>
+            <Button fx:id="btnUpdateStatus" text="✏ Змінити статус" onAction="#handleUpdateStatus" styleClass="secondary-button"/>
+            <Button fx:id="btnExportOrders" text="📊 Експорт Excel" onAction="#handleExportOrders" styleClass="export-button"/>
+            <Button text="🔄 Оновити" onAction="#handleRefresh" styleClass="secondary-button"/>
+          </HBox>
 
-                    <HBox spacing="10" alignment="CENTER_LEFT">
-                        <TextField fx:id="searchField" promptText="🔍 Пошук за назвою..." prefWidth="250"/>
-                        <ComboBox fx:id="categoryFilter" prefWidth="180"/>
-                        <Button text="🔍 Шукати" onAction="#handleSearch" styleClass="secondary-button"/>
-                        <Region HBox.hgrow="ALWAYS"/>
-                        <Button fx:id="btnAddDesign" text="➕ Додати" onAction="#handleAddDesign" styleClass="primary-button"/>
-                        <Button fx:id="btnEditDesign" text="✏ Редагувати" onAction="#handleEditDesign" styleClass="secondary-button"/>
-                        <Button fx:id="btnDeleteDesign" text="🗑 Видалити" onAction="#handleDeleteDesign" styleClass="danger-button"/>
-                        <Button fx:id="btnExportDesigns" text="📊 Експорт Excel" onAction="#handleExportDesigns" styleClass="export-button"/>
-                        <Button text="🔄 Оновити" onAction="#handleRefresh" styleClass="secondary-button"/>
-                    </HBox>
+          <HBox spacing="15" alignment="CENTER_LEFT">
+            <Label text="⬛ В обробці" style="-fx-background-color:#fff9e6; -fx-padding:3 8; -fx-font-size:11px;"/>
+            <Label text="🔵 Підтверджено" style="-fx-background-color:#e6f3ff; -fx-padding:3 8; -fx-font-size:11px;"/>
+            <Label text="🟢 Відправлено" style="-fx-background-color:#e6ffe6; -fx-padding:3 8; -fx-font-size:11px;"/>
+            <Label text="✅ Отримано" style="-fx-background-color:#d4edda; -fx-padding:3 8; -fx-font-size:11px;"/>
+            <Label text="❌ Скасовано" style="-fx-background-color:#ffeeee; -fx-padding:3 8; -fx-font-size:11px;"/>
+          </HBox>
 
+          <TableView fx:id="ordersTable" VBox.vgrow="ALWAYS">
+            <columns>
+              <TableColumn fx:id="colOrderId" text="ID" prefWidth="45"/>
+              <TableColumn fx:id="colOrderUser" text="Клієнт" prefWidth="110"/>
+              <TableColumn fx:id="colOrderDesign" text="Дизайн" prefWidth="160"/>
+              <TableColumn fx:id="colOrderPhone" text="Модель телефону" prefWidth="160"/>
+              <TableColumn fx:id="colOrderQty" text="К-сть" prefWidth="55"/>
+              <TableColumn fx:id="colOrderPrice" text="Сума (грн)" prefWidth="100"/>
+              <TableColumn fx:id="colOrderStatus" text="Статус" prefWidth="110"/>
+            </columns>
+          </TableView>
+        </VBox>
+      </Tab>
 
-                    <TableView fx:id="designsTable" VBox.vgrow="ALWAYS">
-                        <columns>
-                            <TableColumn fx:id="colDesignId" text="ID" prefWidth="50"/>
-                            <TableColumn fx:id="colDesignName" text="Назва" prefWidth="200"/>
-                            <TableColumn fx:id="colDesignCategory" text="Категорія" prefWidth="150"/>
-                            <TableColumn fx:id="colDesignPrice" text="Ціна (грн)" prefWidth="120"/>
-                            <TableColumn fx:id="colDesignAvailable" text="Доступний" prefWidth="100"/>
-                        </columns>
-                    </TableView>
-                </VBox>
-            </Tab>
-
-
-            <Tab text="📦 Замовлення">
-                <VBox spacing="10">
-                    <padding><Insets top="10" right="15" bottom="10" left="15"/></padding>
-
-                    <HBox spacing="10" alignment="CENTER_LEFT">
-                        <ComboBox fx:id="statusFilter" prefWidth="180"/>
-                        <Region HBox.hgrow="ALWAYS"/>
-                        <Button fx:id="btnUpdateStatus" text="✏ Змінити статус" onAction="#handleUpdateStatus" styleClass="secondary-button"/>
-                        <Button fx:id="btnExportOrders" text="📊 Експорт Excel" onAction="#handleExportOrders" styleClass="export-button"/>
-                        <Button text="🔄 Оновити" onAction="#handleRefresh" styleClass="secondary-button"/>
-                    </HBox>
-
-                    <TableView fx:id="ordersTable" VBox.vgrow="ALWAYS">
-                        <columns>
-                            <TableColumn fx:id="colOrderId" text="ID" prefWidth="50"/>
-                            <TableColumn fx:id="colOrderUser" text="Клієнт" prefWidth="120"/>
-                            <TableColumn fx:id="colOrderDesign" text="Дизайн" prefWidth="180"/>
-                            <TableColumn fx:id="colOrderPhone" text="Модель телефону" prefWidth="180"/>
-                            <TableColumn fx:id="colOrderQty" text="К-сть" prefWidth="60"/>
-                            <TableColumn fx:id="colOrderPrice" text="Сума (грн)" prefWidth="110"/>
-                            <TableColumn fx:id="colOrderStatus" text="Статус" prefWidth="110"/>
-                        </columns>
-                    </TableView>
-                </VBox>
-            </Tab>
-
-        </TabPane>
-    </center>
+    </TabPane>
+  </center>
 </BorderPane>

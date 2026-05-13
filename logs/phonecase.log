@@ -158,3 +158,86 @@ java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
 2026-05-14 01:34:58.735 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: test
 2026-05-14 01:36:07.603 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
 2026-05-14 01:36:11.541 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
+2026-05-14 12:13:37.600 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
+2026-05-14 12:13:37.778 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
+2026-05-14 12:13:37.945 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
+2026-05-14 12:13:37.946 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
+2026-05-14 12:13:37.947 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
+2026-05-14 12:13:37.949 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
+2026-05-14 12:13:37.949 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
+2026-05-14 12:13:37.949 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
+2026-05-14 12:13:37.963 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
+2026-05-14 12:13:38.163 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 12:13:38.492 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
+2026-05-14 12:13:43.446 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
+2026-05-14 13:47:45.386 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
+2026-05-14 13:47:45.565 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
+2026-05-14 13:47:45.740 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
+2026-05-14 13:47:45.740 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
+2026-05-14 13:47:45.741 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
+2026-05-14 13:47:45.743 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
+2026-05-14 13:47:45.744 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
+2026-05-14 13:47:45.744 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
+2026-05-14 13:47:45.756 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
+2026-05-14 13:47:45.918 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 13:47:46.225 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
+2026-05-14 13:47:56.993 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
+2026-05-14 13:48:03.117 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 13:48:21.811 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: test
+2026-05-14 13:52:52.958 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
+2026-05-14 13:52:53.132 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
+2026-05-14 13:52:53.309 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
+2026-05-14 13:52:53.310 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
+2026-05-14 13:52:53.311 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
+2026-05-14 13:52:53.313 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
+2026-05-14 13:52:53.313 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
+2026-05-14 13:52:53.313 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
+2026-05-14 13:52:53.327 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
+2026-05-14 13:52:53.499 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 13:52:53.775 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
+2026-05-14 13:53:03.201 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
+2026-05-14 13:53:03.374 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
+2026-05-14 13:53:03.541 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
+2026-05-14 13:53:03.542 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
+2026-05-14 13:53:03.543 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
+2026-05-14 13:53:03.545 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
+2026-05-14 13:53:03.545 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
+2026-05-14 13:53:03.545 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
+2026-05-14 13:53:03.559 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
+2026-05-14 13:53:03.725 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 13:53:04.019 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
+2026-05-14 13:53:11.365 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
+2026-05-14 13:57:06.374 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
+2026-05-14 13:57:06.539 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
+2026-05-14 13:57:06.701 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
+2026-05-14 13:57:06.702 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
+2026-05-14 13:57:06.703 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
+2026-05-14 13:57:06.705 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
+2026-05-14 13:57:06.705 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
+2026-05-14 13:57:06.705 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
+2026-05-14 13:57:06.718 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
+2026-05-14 13:57:06.882 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 13:57:07.174 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
+2026-05-14 13:57:15.402 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
+2026-05-14 13:59:13.821 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
+2026-05-14 13:59:14.003 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
+2026-05-14 13:59:14.170 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
+2026-05-14 13:59:14.170 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
+2026-05-14 13:59:14.171 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
+2026-05-14 13:59:14.173 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
+2026-05-14 13:59:14.173 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
+2026-05-14 13:59:14.173 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
+2026-05-14 13:59:14.186 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
+2026-05-14 13:59:14.353 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 13:59:14.625 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
+2026-05-14 13:59:22.223 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
+2026-05-14 13:59:36.097 [JavaFX Application Thread] INFO  c.phonecase.service.OrderServiceImpl - Створено замовлення: id=1, userId=1, total=149.99
+2026-05-14 14:00:31.451 [JavaFX Application Thread] INFO  c.phonecase.service.OrderServiceImpl - Статус замовлення #1 змінено на В обробці
+2026-05-14 14:00:46.966 [JavaFX Application Thread] INFO  c.phonecase.service.OrderServiceImpl - Статус замовлення #1 змінено на Підтверджено
+2026-05-14 14:01:00.897 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 14:01:09.097 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: test
+2026-05-14 14:01:22.110 [JavaFX Application Thread] INFO  c.phonecase.service.OrderServiceImpl - Створено замовлення: id=2, userId=13, total=149.99
+2026-05-14 14:01:35.272 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 14:01:40.319 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
+2026-05-14 14:01:48.965 [JavaFX Application Thread] INFO  c.phonecase.service.OrderServiceImpl - Статус замовлення #2 змінено на Скасовано
+2026-05-14 14:02:06.094 [JavaFX Application Thread] INFO  c.phonecase.service.OrderServiceImpl - Статус замовлення #1 змінено на Відправлено

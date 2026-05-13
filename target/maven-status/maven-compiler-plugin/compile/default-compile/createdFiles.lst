@@ -21,6 +21,7 @@ com\phonecase\service\ReportService.class
 com\phonecase\util\FXMLNavigator.class
 com\phonecase\ui\controller\RegisterController.class
 com\phonecase\repository\PhoneModelRepositoryImpl.class
+com\phonecase\ui\controller\MainController$8.class
 com\phonecase\service\UserService.class
 com\phonecase\ui\controller\RegisterController$1.class
 com\phonecase\ui\controller\MainController$2.class
@@ -28,6 +29,7 @@ com\phonecase\model\Design.class
 com\phonecase\ui\controller\MainController$5.class
 com\phonecase\repository\OrderRepository.class
 com\phonecase\service\OrderServiceImpl.class
+com\phonecase\ui\controller\MainController$7.class
 com\phonecase\ui\controller\MainController.class
 com\phonecase\repository\CrudRepository.class
 com\phonecase\util\SessionManager.class
