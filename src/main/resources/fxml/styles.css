@@ -1,0 +1,216 @@
+/* =========================================
+   PhoneCase Manager — Стилі (JavaFX CSS)
+   Автор: Student
+   ========================================= */
+
+/* Кореневий контейнер */
+.root-container {
+    -fx-background-color: #f0f4f8;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+/* Заголовки */
+.app-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.app-title-small {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.app-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #7f8c8d;
+}
+
+/* Верхня панель */
+.top-bar {
+    -fx-background-color: #2c3e50;
+}
+
+.welcome-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.role-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #bdc3c7;
+}
+
+/* Статистична панель */
+.stats-bar {
+    -fx-background-color: #34495e;
+}
+
+.stat-card {
+    -fx-background-color: #2980b9;
+    -fx-background-radius: 8;
+    -fx-padding: 10 20 10 20;
+    -fx-min-width: 140;
+}
+
+.stat-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #ecf0f1;
+}
+
+.stat-value {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+/* Поля вводу */
+.input-field {
+    -fx-pref-height: 38px;
+    -fx-font-size: 13px;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-color: #bdc3c7;
+    -fx-background-color: white;
+}
+
+.input-field:focused {
+    -fx-border-color: #2980b9;
+    -fx-effect: dropshadow(gaussian, rgba(41,128,185,0.3), 4, 0, 0, 0);
+}
+
+/* Кнопки */
+.primary-button {
+    -fx-background-color: #2980b9;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6;
+    -fx-pref-height: 36px;
+    -fx-pref-width: 120px;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #3498db;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.2), 4, 0, 0, 2);
+}
+
+.secondary-button {
+    -fx-background-color: #7f8c8d;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-background-radius: 6;
+    -fx-pref-height: 36px;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #95a5a6;
+}
+
+.danger-button {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-background-radius: 6;
+    -fx-pref-height: 36px;
+    -fx-cursor: hand;
+}
+
+.danger-button:hover {
+    -fx-background-color: #c0392b;
+}
+
+.export-button {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-background-radius: 6;
+    -fx-pref-height: 36px;
+    -fx-cursor: hand;
+}
+
+.export-button:hover {
+    -fx-background-color: #2ecc71;
+}
+
+.logout-button {
+    -fx-background-color: #c0392b;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+}
+
+/* Мітки */
+.field-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2c3e50;
+}
+
+.error-label {
+    -fx-text-fill: #e74c3c;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.success-label {
+    -fx-text-fill: #27ae60;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.hint-label {
+    -fx-text-fill: #95a5a6;
+    -fx-font-size: 11px;
+    -fx-font-style: italic;
+}
+
+/* Таблиці */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+.table-view .column-header {
+    -fx-background-color: #2c3e50;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #f8f9fa;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #3498db;
+}
+
+.table-row-cell:selected .text {
+    -fx-fill: white;
+}
+
+/* Вкладки */
+.main-tabs .tab-header-area .tab {
+    -fx-background-color: #7f8c8d;
+    -fx-padding: 8 20 8 20;
+}
+
+.main-tabs .tab-header-area .tab:selected {
+    -fx-background-color: #2980b9;
+}
+
+.main-tabs .tab-header-area .tab .tab-label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}

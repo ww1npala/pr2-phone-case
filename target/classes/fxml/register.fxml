@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.phonecase.ui.controller.RegisterController"
+      alignment="CENTER" spacing="12" styleClass="root-container">
+    <padding><Insets top="30" right="40" bottom="30" left="40"/></padding>
+
+    <Label text="Реєстрація нового користувача" styleClass="app-title"/>
+
+    <VBox spacing="6" maxWidth="300" alignment="CENTER_LEFT">
+        <Label text="Ім'я користувача:" styleClass="field-label"/>
+        <TextField fx:id="usernameField" promptText="Мінімум 3 символи" maxWidth="300" styleClass="input-field"/>
+
+        <Label text="Email:" styleClass="field-label"/>
+        <TextField fx:id="emailField" promptText="example@gmail.com" maxWidth="300" styleClass="input-field"/>
+
+        <Label text="Пароль:" styleClass="field-label"/>
+        <PasswordField fx:id="passwordField" promptText="Мінімум 6 символів" maxWidth="300" styleClass="input-field"/>
+
+        <Label text="Підтвердження пароля:" styleClass="field-label"/>
+        <PasswordField fx:id="confirmPasswordField" promptText="Повторіть пароль" maxWidth="300" styleClass="input-field"/>
+
+        <Label fx:id="errorLabel" styleClass="error-label" wrapText="true" maxWidth="300"/>
+        <Label fx:id="successLabel" styleClass="success-label" wrapText="true" maxWidth="300"/>
+    </VBox>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button fx:id="registerButton" text="Зареєструватись" onAction="#handleRegister" styleClass="primary-button" defaultButton="true"/>
+        <Button fx:id="backButton" text="Назад" onAction="#handleBack" styleClass="secondary-button"/>
+    </HBox>
+</VBox>
