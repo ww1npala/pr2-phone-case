@@ -6,7 +6,7 @@
             fx:controller="com.phonecase.ui.controller.MainController"
             styleClass="root-container">
 
-    <!-- Верхня панель -->
+
     <top>
         <HBox styleClass="top-bar" alignment="CENTER_LEFT" spacing="15">
             <padding><Insets top="10" right="20" bottom="10" left="20"/></padding>
@@ -20,7 +20,7 @@
         </HBox>
     </top>
 
-    <!-- Статистика -->
+
     <top>
         <VBox>
             <HBox styleClass="top-bar" alignment="CENTER_LEFT" spacing="15">
@@ -33,7 +33,7 @@
                 </VBox>
                 <Button text="🚪 Вийти" onAction="#handleLogout" styleClass="logout-button"/>
             </HBox>
-            <!-- Статистичні картки -->
+
             <HBox spacing="15" alignment="CENTER" styleClass="stats-bar">
                 <padding><Insets top="10" right="20" bottom="10" left="20"/></padding>
                 <VBox styleClass="stat-card" alignment="CENTER">
@@ -56,16 +56,16 @@
         </VBox>
     </top>
 
-    <!-- Основний вміст: вкладки -->
+
     <center>
         <TabPane fx:id="mainTabPane" tabClosingPolicy="UNAVAILABLE" styleClass="main-tabs">
 
-            <!-- Вкладка Дизайни -->
+
             <Tab text="🎨 Дизайни">
                 <VBox spacing="10">
                     <padding><Insets top="10" right="15" bottom="10" left="15"/></padding>
 
-                    <!-- Панель пошуку та фільтрів -->
+
                     <HBox spacing="10" alignment="CENTER_LEFT">
                         <TextField fx:id="searchField" promptText="🔍 Пошук за назвою..." prefWidth="250"/>
                         <ComboBox fx:id="categoryFilter" prefWidth="180"/>
@@ -78,7 +78,7 @@
                         <Button text="🔄 Оновити" onAction="#handleRefresh" styleClass="secondary-button"/>
                     </HBox>
 
-                    <!-- Таблиця дизайнів -->
+
                     <TableView fx:id="designsTable" VBox.vgrow="ALWAYS">
                         <columns>
                             <TableColumn fx:id="colDesignId" text="ID" prefWidth="50"/>
@@ -91,7 +91,7 @@
                 </VBox>
             </Tab>
 
-            <!-- Вкладка Замовлення -->
+
             <Tab text="📦 Замовлення">
                 <VBox spacing="10">
                     <padding><Insets top="10" right="15" bottom="10" left="15"/></padding>
