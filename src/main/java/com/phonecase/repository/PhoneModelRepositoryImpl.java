@@ -18,30 +18,30 @@ public class PhoneModelRepositoryImpl implements PhoneModelRepository {
     @Inject
     public PhoneModelRepositoryImpl(DatabaseConnection db) { this.db = db; }
 
-    @Override
-    public PhoneModel save(PhoneModel pm) {
-        Connection conn = null;
-        try {
-            conn = db.getConnection();
-            try (PreparedStatement ps = conn.prepareStatement(
-                    "INSERT INTO phone_models (brand,model_name,screen_size,release_year) VALUES (?,?,?,?)",
-                    Statement.RETURN_GENERATED_KEYS)) {
-                ps.setString(1, pm.getBrand());
-                ps.setString(2, pm.getModelName());
-                ps.setObject(3, pm.getScreenSize());
-                ps.setObject(4, pm.getReleaseYear());
-                ps.executeUpdate();
-                try (ResultSet keys = ps.getGeneratedKeys()) {
-                    if (keys.next()) pm.setId(keys.getInt(1));
-                }
-            }
-            return pm;
-        } catch (SQLException e) {
-            throw new RuntimeException("Помилка збереження моделі", e);
-        } finally {
-            db.releaseConnection(conn);
-        }
+  @Override
+  public PhoneModel save(PhoneModel pm) {
+    Connection conn = null;
+    try {
+      conn = db.getConnection();
+      try (PreparedStatement ps = conn.prepareStatement(
+          "INSERT INTO phone_models (brand,model_name,screen_size,release_year) VALUES (?,?,?,?)")) {
+        ps.setString(1, pm.getBrand());
+        ps.setString(2, pm.getModelName());
+        ps.setObject(3, pm.getScreenSize());
+        ps.setObject(4, pm.getReleaseYear());
+        ps.executeUpdate();
+      }
+      try (Statement st = conn.createStatement();
+          ResultSet rs = st.executeQuery("SELECT last_insert_rowid()")) {
+        if (rs.next()) pm.setId(rs.getInt(1));
+      }
+      return pm;
+    } catch (SQLException e) {
+      throw new RuntimeException("Помилка збереження моделі", e);
+    } finally {
+      db.releaseConnection(conn);
     }
+  }
 
     @Override
     public Optional<PhoneModel> findById(Integer id) {

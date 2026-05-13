@@ -23,30 +23,32 @@ public class UserRepositoryImpl implements UserRepository {
     @Inject
     public UserRepositoryImpl(DatabaseConnection db) { this.db = db; }
 
-    @Override
-    public User save(User user) {
-        final String sql = "INSERT INTO users (username, password, email, role) VALUES (?,?,?,?)";
-        Connection conn = null;
-        try {
-            conn = db.getConnection();
-            try (PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
-                ps.setString(1, user.getUsername());
-                ps.setString(2, user.getPassword());
-                ps.setString(3, user.getEmail());
-                ps.setString(4, user.getRole() != null ? user.getRole() : "USER");
-                ps.executeUpdate();
-                try (ResultSet keys = ps.getGeneratedKeys()) {
-                    if (keys.next()) user.setId(keys.getInt(1));
-                }
-            }
-            return user;
-        } catch (SQLException e) {
-            logger.error("Помилка збереження користувача: {}", e.getMessage(), e);
-            throw new RuntimeException("Не вдалось зберегти користувача", e);
-        } finally {
-            db.releaseConnection(conn);
-        }
+  @Override
+  public User save(User user) {
+    Connection conn = null;
+    try {
+      conn = db.getConnection();
+      try (PreparedStatement ps = conn.prepareStatement(
+          "INSERT INTO users (username, password, email, role) VALUES (?,?,?,?)")) {
+        ps.setString(1, user.getUsername());
+        ps.setString(2, user.getPassword());
+        ps.setString(3, user.getEmail());
+        ps.setString(4, user.getRole() != null ? user.getRole() : "USER");
+        ps.executeUpdate();
+      }
+
+      try (Statement st = conn.createStatement();
+          ResultSet rs = st.executeQuery("SELECT last_insert_rowid()")) {
+        if (rs.next()) user.setId(rs.getInt(1));
+      }
+      return user;
+    } catch (SQLException e) {
+      logger.error("Помилка збереження користувача: {}", e.getMessage(), e);
+      throw new RuntimeException("Не вдалось зберегти користувача", e);
+    } finally {
+      db.releaseConnection(conn);
     }
+  }
 
     @Override
     public Optional<User> findById(Integer id) {

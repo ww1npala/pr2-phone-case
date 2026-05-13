@@ -18,28 +18,28 @@ public class CategoryRepositoryImpl implements CategoryRepository {
     @Inject
     public CategoryRepositoryImpl(DatabaseConnection db) { this.db = db; }
 
-    @Override
-    public Category save(Category cat) {
-        Connection conn = null;
-        try {
-            conn = db.getConnection();
-            try (PreparedStatement ps = conn.prepareStatement(
-                    "INSERT INTO categories (name, description) VALUES (?,?)",
-                    Statement.RETURN_GENERATED_KEYS)) {
-                ps.setString(1, cat.getName());
-                ps.setString(2, cat.getDescription());
-                ps.executeUpdate();
-                try (ResultSet keys = ps.getGeneratedKeys()) {
-                    if (keys.next()) cat.setId(keys.getInt(1));
-                }
-            }
-            return cat;
-        } catch (SQLException e) {
-            throw new RuntimeException("Помилка збереження категорії", e);
-        } finally {
-            db.releaseConnection(conn);
-        }
+  @Override
+  public Category save(Category cat) {
+    Connection conn = null;
+    try {
+      conn = db.getConnection();
+      try (PreparedStatement ps = conn.prepareStatement(
+          "INSERT INTO categories (name, description) VALUES (?,?)")) {
+        ps.setString(1, cat.getName());
+        ps.setString(2, cat.getDescription());
+        ps.executeUpdate();
+      }
+      try (Statement st = conn.createStatement();
+          ResultSet rs = st.executeQuery("SELECT last_insert_rowid()")) {
+        if (rs.next()) cat.setId(rs.getInt(1));
+      }
+      return cat;
+    } catch (SQLException e) {
+      throw new RuntimeException("Помилка збереження категорії", e);
+    } finally {
+      db.releaseConnection(conn);
     }
+  }
 
     @Override
     public Optional<Category> findById(Integer id) {

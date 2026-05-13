@@ -29,39 +29,36 @@ public class DesignRepositoryImpl implements DesignRepository {
         this.db = db;
     }
 
-    @Override
-    public Design save(Design design) {
-        final String sql = """
-            INSERT INTO designs (name, description, category_id, image_path, price, is_available, created_by)
-            VALUES (?, ?, ?, ?, ?, ?, ?)
-        """;
-        Connection conn = null;
-        try {
-            conn = db.getConnection();
-            try (PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
-                mapToStatement(ps, design);
-                ps.executeUpdate();
-                try (ResultSet keys = ps.getGeneratedKeys()) {
-                    if (keys.next()) {
-                        design.setId(keys.getInt(1));
-                    }
-                }
-            }
-
-            if (design.getCompatibleModels() != null) {
-                for (PhoneModel pm : design.getCompatibleModels()) {
-                    addCompatibility(design.getId(), pm.getId());
-                }
-            }
-          logger.debug("Дизайн збережено: id={}, name={}", design.getId(), design.getName());
-          return findById(design.getId()).orElse(design);
-        } catch (SQLException e) {
-            logger.error("Помилка збереження дизайну: {}", e.getMessage(), e);
-            throw new RuntimeException("Не вдалось зберегти дизайн", e);
-        } finally {
-            db.releaseConnection(conn);
+  public Design save(Design design) {
+    final String sql = """
+        INSERT INTO designs (name, description, category_id, image_path, price, is_available, created_by)
+        VALUES (?, ?, ?, ?, ?, ?, ?)
+    """;
+    Connection conn = null;
+    try {
+      conn = db.getConnection();
+      try (PreparedStatement ps = conn.prepareStatement(sql)) {
+        mapToStatement(ps, design);
+        ps.executeUpdate();
+      }
+      try (Statement st = conn.createStatement();
+          ResultSet rs = st.executeQuery("SELECT last_insert_rowid()")) {
+        if (rs.next()) design.setId(rs.getInt(1));
+      }
+      if (design.getCompatibleModels() != null) {
+        for (PhoneModel pm : design.getCompatibleModels()) {
+          addCompatibility(design.getId(), pm.getId());
         }
+      }
+      logger.debug("Дизайн збережено: id={}, name={}", design.getId(), design.getName());
+      return findById(design.getId()).orElse(design);
+    } catch (SQLException e) {
+      logger.error("Помилка збереження дизайну: {}", e.getMessage(), e);
+      throw new RuntimeException("Не вдалось зберегти дизайн", e);
+    } finally {
+      db.releaseConnection(conn);
     }
+  }
 
     @Override
     public Optional<Design> findById(Integer id) {

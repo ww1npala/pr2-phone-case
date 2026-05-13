@@ -260,7 +260,7 @@ class DesignRepositoryImplTest {
     void testBuilderValidation() {
         assertThrows(IllegalStateException.class, () ->
             new Design.Builder()
-                .name("")  // порожня назва
+                .name("")
                 .price(100)
                 .build()
         );

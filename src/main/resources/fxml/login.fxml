@@ -25,6 +25,4 @@
         <Button fx:id="loginButton" text="Увійти" onAction="#handleLogin" styleClass="primary-button" defaultButton="true"/>
         <Button fx:id="registerButton" text="Реєстрація" onAction="#handleRegister" styleClass="secondary-button"/>
     </HBox>
-
-    <Label text="Тестовий вхід: admin / будь-який пароль" styleClass="hint-label"/>
 </VBox>

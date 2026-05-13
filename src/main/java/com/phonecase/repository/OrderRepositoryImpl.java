@@ -19,34 +19,35 @@ public class OrderRepositoryImpl implements OrderRepository {
     @Inject
     public OrderRepositoryImpl(DatabaseConnection db) { this.db = db; }
 
-    @Override
-    public Order save(Order order) {
-        final String sql = """
-            INSERT INTO orders (user_id, design_id, phone_model_id, quantity, total_price, status)
-            VALUES (?,?,?,?,?,?)
-        """;
-        Connection conn = null;
-        try {
-            conn = db.getConnection();
-            try (PreparedStatement ps = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
-                ps.setInt(1, order.getUserId());
-                ps.setInt(2, order.getDesignId());
-                ps.setInt(3, order.getPhoneModelId());
-                ps.setInt(4, order.getQuantity());
-                ps.setDouble(5, order.getTotalPrice());
-                ps.setString(6, order.getStatus().name());
-                ps.executeUpdate();
-                try (ResultSet keys = ps.getGeneratedKeys()) {
-                    if (keys.next()) order.setId(keys.getInt(1));
-                }
-            }
-            return order;
-        } catch (SQLException e) {
-            throw new RuntimeException("Помилка збереження замовлення", e);
-        } finally {
-            db.releaseConnection(conn);
-        }
+  @Override
+  public Order save(Order order) {
+    final String sql = """
+        INSERT INTO orders (user_id, design_id, phone_model_id, quantity, total_price, status)
+        VALUES (?,?,?,?,?,?)
+    """;
+    Connection conn = null;
+    try {
+      conn = db.getConnection();
+      try (PreparedStatement ps = conn.prepareStatement(sql)) {
+        ps.setInt(1, order.getUserId());
+        ps.setInt(2, order.getDesignId());
+        ps.setInt(3, order.getPhoneModelId());
+        ps.setInt(4, order.getQuantity());
+        ps.setDouble(5, order.getTotalPrice());
+        ps.setString(6, order.getStatus().name());
+        ps.executeUpdate();
+      }
+      try (Statement st = conn.createStatement();
+          ResultSet rs = st.executeQuery("SELECT last_insert_rowid()")) {
+        if (rs.next()) order.setId(rs.getInt(1));
+      }
+      return order;
+    } catch (SQLException e) {
+      throw new RuntimeException("Помилка збереження замовлення", e);
+    } finally {
+      db.releaseConnection(conn);
     }
+  }
 
     @Override
     public Optional<Order> findById(Integer id) {

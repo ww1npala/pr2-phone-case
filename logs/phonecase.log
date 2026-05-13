@@ -1,942 +1,160 @@
-2026-05-12 00:02:39.438 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
-2026-05-12 00:02:44.961 [JavaFX Application Thread] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн видалено: id=5, affected=1
-2026-05-12 00:02:44.962 [JavaFX Application Thread] INFO  c.p.service.DesignServiceImpl - Видалено дизайн: id=5
-2026-05-12 00:02:46.856 [JavaFX Application Thread] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн видалено: id=4, affected=1
-2026-05-12 00:02:46.857 [JavaFX Application Thread] INFO  c.p.service.DesignServiceImpl - Видалено дизайн: id=4
-2026-05-12 00:02:49.092 [JavaFX Application Thread] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн видалено: id=3, affected=1
-2026-05-12 00:02:49.092 [JavaFX Application Thread] INFO  c.p.service.DesignServiceImpl - Видалено дизайн: id=3
-2026-05-12 00:02:58.400 [JavaFX Application Thread] ERROR c.p.repository.DesignRepositoryImpl - Помилка збереження дизайну: not implemented by SQLite JDBC driver
+2026-05-14 00:40:25.303 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
+2026-05-14 00:40:25.535 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
+2026-05-14 00:40:25.727 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
+2026-05-14 00:40:25.728 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
+2026-05-14 00:40:25.729 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
+2026-05-14 00:40:25.732 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
+2026-05-14 00:40:25.732 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
+2026-05-14 00:40:25.732 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
+2026-05-14 00:40:25.746 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
+2026-05-14 00:40:25.949 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 00:40:26.311 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
+2026-05-14 00:40:30.162 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
+2026-05-14 00:40:37.046 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 00:46:49.560 [main] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
+2026-05-14 00:46:49.712 [main] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
+2026-05-14 00:46:49.941 [main] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн збережено: id=1, name=Тестовий дизайн
+2026-05-14 00:46:49.958 [main] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн збережено: id=2, name=Дизайн для пошуку
+2026-05-14 00:46:49.968 [main] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн збережено: id=3, name=Дизайн до оновлення
+2026-05-14 00:46:49.971 [main] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн оновлено: id=3
+2026-05-14 00:46:49.973 [main] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн збережено: id=4, name=Дизайн для видалення
+2026-05-14 00:46:49.974 [main] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн видалено: id=4, affected=1
+2026-05-14 00:46:49.977 [main] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн збережено: id=5, name=Гірський пейзаж
+2026-05-14 00:46:49.978 [main] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн збережено: id=6, name=Морський захід
+2026-05-14 00:46:51.422 [main] INFO  c.p.service.DesignServiceImpl - Створено новий дизайн: id=100, name=Новий дизайн
+2026-05-14 00:46:51.501 [main] INFO  c.p.service.DesignServiceImpl - Видалено дизайн: id=1
+2026-05-14 00:46:51.562 [main] WARN  c.phonecase.service.UserServiceImpl - Спроба входу з порожніми даними.
+2026-05-14 00:46:51.589 [main] WARN  c.phonecase.service.UserServiceImpl - Спроба входу з порожніми даними.
+2026-05-14 00:46:51.595 [main] INFO  c.phonecase.service.UserServiceImpl - Зареєстровано нового користувача: newuser
+2026-05-14 00:48:12.545 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
+2026-05-14 00:48:12.706 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
+2026-05-14 00:48:12.883 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
+2026-05-14 00:48:12.884 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
+2026-05-14 00:48:12.885 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
+2026-05-14 00:48:12.888 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
+2026-05-14 00:48:12.888 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
+2026-05-14 00:48:12.888 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
+2026-05-14 00:48:12.900 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
+2026-05-14 00:48:13.070 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 00:48:13.337 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
+2026-05-14 00:48:19.908 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
+2026-05-14 00:48:30.551 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 00:52:23.346 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
+2026-05-14 00:52:23.492 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
+2026-05-14 00:52:23.659 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
+2026-05-14 00:52:23.659 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
+2026-05-14 00:52:23.661 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
+2026-05-14 00:52:23.663 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
+2026-05-14 00:52:23.663 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
+2026-05-14 00:52:23.663 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
+2026-05-14 00:52:23.679 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
+2026-05-14 00:52:23.882 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 00:52:24.232 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
+2026-05-14 00:56:45.008 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
+2026-05-14 00:56:45.162 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
+2026-05-14 00:56:45.326 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
+2026-05-14 00:56:45.327 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
+2026-05-14 00:56:45.328 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
+2026-05-14 00:56:45.330 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
+2026-05-14 00:56:45.330 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
+2026-05-14 00:56:45.330 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
+2026-05-14 00:56:45.346 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
+2026-05-14 00:56:45.559 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 00:56:45.903 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
+2026-05-14 00:56:51.124 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
+2026-05-14 00:56:52.877 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 00:57:00.176 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
+2026-05-14 00:57:06.892 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 00:57:17.565 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 00:58:47.779 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
+2026-05-14 00:58:47.924 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
+2026-05-14 00:58:48.080 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
+2026-05-14 00:58:48.080 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
+2026-05-14 00:58:48.082 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
+2026-05-14 00:58:48.084 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
+2026-05-14 00:58:48.084 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
+2026-05-14 00:58:48.084 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
+2026-05-14 00:58:48.100 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
+2026-05-14 00:58:48.285 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 00:58:48.592 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
+2026-05-14 00:58:52.795 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
+2026-05-14 01:00:53.258 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 01:01:09.994 [Thread-5] ERROR c.p.repository.UserRepositoryImpl - Помилка збереження користувача: not implemented by SQLite JDBC driver
 java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
 	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
 	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:357)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:44)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:21)
-	at com.phonecase.service.DesignServiceImpl.createDesign(DesignServiceImpl.java:53)
-	at com.phonecase.ui.controller.MainController.lambda$showDesignDialog$22(MainController.java:446)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at com.phonecase.ui.controller.MainController.showDesignDialog(MainController.java:443)
-	at com.phonecase.ui.controller.MainController.handleAddDesign(MainController.java:278)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
-	at com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
-	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
-	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
-	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
-	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
-	at javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.scene.Node.fireEvent(Node.java:8875)
-	at javafx.scene.control.Button.fire(Button.java:203)
-	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
-	at com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
-	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
-	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
-	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
-	at javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
-	at javafx.scene.Scene.processMouseEvent(Scene.java:1890)
-	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
-	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
-	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
-	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
-	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
-	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
-	at com.sun.glass.ui.View.handleMouseEvent(View.java:551)
-	at com.sun.glass.ui.View.notifyMouse(View.java:937)
-	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at com.phonecase.repository.UserRepositoryImpl.save(UserRepositoryImpl.java:38)
+	at com.phonecase.repository.UserRepositoryImpl.save(UserRepositoryImpl.java:17)
+	at com.phonecase.service.UserServiceImpl.register(UserServiceImpl.java:57)
+	at com.phonecase.ui.controller.RegisterController$1.call(RegisterController.java:91)
+	at com.phonecase.ui.controller.RegisterController$1.call(RegisterController.java:88)
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-2026-05-12 00:04:00.241 [Thread-7] INFO  c.p.service.ReportServiceImpl - Excel-звіт з дизайнами збережено: C:\Users\Winpala\Desktop\designs_report.xlsx
-2026-05-12 00:04:43.283 [JavaFX Application Thread] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн видалено: id=6, affected=1
-2026-05-12 00:04:43.283 [JavaFX Application Thread] INFO  c.p.service.DesignServiceImpl - Видалено дизайн: id=6
-2026-05-12 00:08:35.175 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
-2026-05-12 00:08:35.337 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
-2026-05-12 00:08:35.499 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
-2026-05-12 00:08:35.499 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
-2026-05-12 00:08:35.501 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
-2026-05-12 00:08:35.502 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
-2026-05-12 00:08:35.503 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
-2026-05-12 00:08:35.503 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
-2026-05-12 00:08:35.516 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
-2026-05-12 00:08:35.679 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
-2026-05-12 00:08:35.962 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
-2026-05-12 00:08:45.967 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
-2026-05-12 00:09:02.362 [JavaFX Application Thread] ERROR c.p.repository.DesignRepositoryImpl - Помилка збереження дизайну: not implemented by SQLite JDBC driver
+2026-05-14 01:01:09.996 [JavaFX Application Thread] ERROR c.p.ui.controller.RegisterController - Помилка реєстрації: Не вдалось зберегти користувача
+2026-05-14 01:06:23.879 [Thread-6] ERROR c.p.repository.UserRepositoryImpl - Помилка збереження користувача: not implemented by SQLite JDBC driver
 java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
 	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
 	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:357)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:44)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:21)
-	at com.phonecase.service.DesignServiceImpl.createDesign(DesignServiceImpl.java:53)
-	at com.phonecase.ui.controller.MainController.lambda$showDesignDialog$22(MainController.java:446)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at com.phonecase.ui.controller.MainController.showDesignDialog(MainController.java:443)
-	at com.phonecase.ui.controller.MainController.handleAddDesign(MainController.java:278)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at javafx.base@21.0.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
-	at javafx.fxml@21.0.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
-	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
-	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
-	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
-	at javafx.controls@21.0.1/javafx.scene.control.Button.fire(Button.java:203)
-	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
-	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
-	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
-	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
-	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
+	at com.phonecase.repository.UserRepositoryImpl.save(UserRepositoryImpl.java:38)
+	at com.phonecase.repository.UserRepositoryImpl.save(UserRepositoryImpl.java:17)
+	at com.phonecase.service.UserServiceImpl.register(UserServiceImpl.java:57)
+	at com.phonecase.ui.controller.RegisterController$1.call(RegisterController.java:91)
+	at com.phonecase.ui.controller.RegisterController$1.call(RegisterController.java:88)
+	at javafx.concurrent.Task$TaskCallable.call(Task.java:1399)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
-2026-05-12 00:11:13.514 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
-2026-05-12 00:11:13.681 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
-2026-05-12 00:11:13.847 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
-2026-05-12 00:11:13.847 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
-2026-05-12 00:11:13.848 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
-2026-05-12 00:11:13.850 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
-2026-05-12 00:11:13.851 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
-2026-05-12 00:11:13.851 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
-2026-05-12 00:11:13.864 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
-2026-05-12 00:11:14.034 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
-2026-05-12 00:11:14.347 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
-2026-05-12 00:11:21.319 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
-2026-05-12 00:11:33.523 [JavaFX Application Thread] ERROR c.p.repository.DesignRepositoryImpl - Помилка збереження дизайну: not implemented by SQLite JDBC driver
-java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
-	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
-	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:357)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:44)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:21)
-	at com.phonecase.service.DesignServiceImpl.createDesign(DesignServiceImpl.java:53)
-	at com.phonecase.ui.controller.MainController.lambda$showDesignDialog$22(MainController.java:446)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at com.phonecase.ui.controller.MainController.showDesignDialog(MainController.java:443)
-	at com.phonecase.ui.controller.MainController.handleAddDesign(MainController.java:278)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at javafx.base@21.0.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
-	at javafx.fxml@21.0.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
-	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
-	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
-	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
-	at javafx.controls@21.0.1/javafx.scene.control.Button.fire(Button.java:203)
-	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
-	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
-	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
-	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
-	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2026-05-12 00:11:33.526 [JavaFX Application Thread] ERROR c.p.ui.controller.MainController - Помилка збереження дизайну: Не вдалось зберегти дизайн
-java.lang.RuntimeException: Не вдалось зберегти дизайн
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:60)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:21)
-	at com.phonecase.service.DesignServiceImpl.createDesign(DesignServiceImpl.java:53)
-	at com.phonecase.ui.controller.MainController.lambda$showDesignDialog$22(MainController.java:446)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at com.phonecase.ui.controller.MainController.showDesignDialog(MainController.java:443)
-	at com.phonecase.ui.controller.MainController.handleAddDesign(MainController.java:278)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at javafx.base@21.0.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
-	at javafx.fxml@21.0.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
-	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
-	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
-	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
-	at javafx.controls@21.0.1/javafx.scene.control.Button.fire(Button.java:203)
-	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
-	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
-	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
-	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
-	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
-	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
-	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:357)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:44)
-	... 64 common frames omitted
-2026-05-12 00:11:57.283 [JavaFX Application Thread] ERROR c.p.repository.DesignRepositoryImpl - Помилка збереження дизайну: not implemented by SQLite JDBC driver
-java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
-	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
-	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:357)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:44)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:21)
-	at com.phonecase.service.DesignServiceImpl.createDesign(DesignServiceImpl.java:53)
-	at com.phonecase.ui.controller.MainController.lambda$showDesignDialog$22(MainController.java:446)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at com.phonecase.ui.controller.MainController.showDesignDialog(MainController.java:443)
-	at com.phonecase.ui.controller.MainController.handleAddDesign(MainController.java:278)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at javafx.base@21.0.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
-	at javafx.fxml@21.0.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
-	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
-	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
-	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
-	at javafx.controls@21.0.1/javafx.scene.control.Button.fire(Button.java:203)
-	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
-	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
-	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
-	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
-	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2026-05-12 00:11:57.284 [JavaFX Application Thread] ERROR c.p.ui.controller.MainController - Помилка збереження дизайну: Не вдалось зберегти дизайн
-java.lang.RuntimeException: Не вдалось зберегти дизайн
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:60)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:21)
-	at com.phonecase.service.DesignServiceImpl.createDesign(DesignServiceImpl.java:53)
-	at com.phonecase.ui.controller.MainController.lambda$showDesignDialog$22(MainController.java:446)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at com.phonecase.ui.controller.MainController.showDesignDialog(MainController.java:443)
-	at com.phonecase.ui.controller.MainController.handleAddDesign(MainController.java:278)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at javafx.base@21.0.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
-	at javafx.fxml@21.0.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
-	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
-	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
-	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
-	at javafx.controls@21.0.1/javafx.scene.control.Button.fire(Button.java:203)
-	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
-	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
-	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
-	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
-	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
-	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
-	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:357)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:44)
-	... 64 common frames omitted
-2026-05-12 00:43:20.832 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
-2026-05-12 00:43:21.011 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
-2026-05-12 00:43:21.225 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
-2026-05-12 00:43:21.226 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
-2026-05-12 00:43:21.228 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
-2026-05-12 00:43:21.230 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
-2026-05-12 00:43:21.231 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
-2026-05-12 00:43:21.231 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
-2026-05-12 00:43:21.246 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
-2026-05-12 00:43:21.440 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
-2026-05-12 00:43:21.800 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
-2026-05-12 00:43:30.809 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
-2026-05-12 00:43:39.467 [JavaFX Application Thread] ERROR c.p.repository.DesignRepositoryImpl - Помилка збереження дизайну: not implemented by SQLite JDBC driver
-java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
-	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
-	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:357)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:44)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:21)
-	at com.phonecase.service.DesignServiceImpl.createDesign(DesignServiceImpl.java:53)
-	at com.phonecase.ui.controller.MainController.lambda$showDesignDialog$22(MainController.java:446)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at com.phonecase.ui.controller.MainController.showDesignDialog(MainController.java:443)
-	at com.phonecase.ui.controller.MainController.handleAddDesign(MainController.java:278)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at javafx.base@21.0.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
-	at javafx.fxml@21.0.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
-	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
-	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
-	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
-	at javafx.controls@21.0.1/javafx.scene.control.Button.fire(Button.java:203)
-	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
-	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
-	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
-	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
-	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2026-05-12 00:43:39.469 [JavaFX Application Thread] ERROR c.p.ui.controller.MainController - Помилка збереження дизайну: Не вдалось зберегти дизайн
-java.lang.RuntimeException: Не вдалось зберегти дизайн
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:60)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:21)
-	at com.phonecase.service.DesignServiceImpl.createDesign(DesignServiceImpl.java:53)
-	at com.phonecase.ui.controller.MainController.lambda$showDesignDialog$22(MainController.java:446)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at com.phonecase.ui.controller.MainController.showDesignDialog(MainController.java:443)
-	at com.phonecase.ui.controller.MainController.handleAddDesign(MainController.java:278)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at javafx.base@21.0.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
-	at javafx.fxml@21.0.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
-	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
-	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
-	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
-	at javafx.controls@21.0.1/javafx.scene.control.Button.fire(Button.java:203)
-	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
-	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
-	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
-	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
-	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
-	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
-	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:357)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:44)
-	... 64 common frames omitted
-2026-05-12 01:03:15.292 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
-2026-05-12 01:03:15.559 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
-2026-05-12 01:03:15.746 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
-2026-05-12 01:03:15.746 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
-2026-05-12 01:03:15.747 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
-2026-05-12 01:03:15.749 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
-2026-05-12 01:03:15.750 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
-2026-05-12 01:03:15.750 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
-2026-05-12 01:03:15.764 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
-2026-05-12 01:03:15.937 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
-2026-05-12 01:03:16.230 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
-2026-05-12 01:03:21.922 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
-2026-05-12 01:03:30.140 [JavaFX Application Thread] ERROR c.p.repository.DesignRepositoryImpl - Помилка збереження дизайну: not implemented by SQLite JDBC driver
-java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
-	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
-	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:357)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:44)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:21)
-	at com.phonecase.service.DesignServiceImpl.createDesign(DesignServiceImpl.java:53)
-	at com.phonecase.ui.controller.MainController.lambda$showDesignDialog$22(MainController.java:446)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at com.phonecase.ui.controller.MainController.showDesignDialog(MainController.java:443)
-	at com.phonecase.ui.controller.MainController.handleAddDesign(MainController.java:278)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at javafx.base@21.0.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
-	at javafx.fxml@21.0.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
-	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
-	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
-	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
-	at javafx.controls@21.0.1/javafx.scene.control.Button.fire(Button.java:203)
-	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
-	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
-	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
-	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
-	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2026-05-12 01:03:30.143 [JavaFX Application Thread] ERROR c.p.ui.controller.MainController - Помилка збереження дизайну: Не вдалось зберегти дизайн
-java.lang.RuntimeException: Не вдалось зберегти дизайн
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:60)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:21)
-	at com.phonecase.service.DesignServiceImpl.createDesign(DesignServiceImpl.java:53)
-	at com.phonecase.ui.controller.MainController.lambda$showDesignDialog$22(MainController.java:446)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at com.phonecase.ui.controller.MainController.showDesignDialog(MainController.java:443)
-	at com.phonecase.ui.controller.MainController.handleAddDesign(MainController.java:278)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at javafx.base@21.0.1/com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
-	at javafx.fxml@21.0.1/com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
-	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
-	at javafx.fxml@21.0.1/javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
-	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.graphics@21.0.1/javafx.scene.Node.fireEvent(Node.java:8875)
-	at javafx.controls@21.0.1/javafx.scene.control.Button.fire(Button.java:203)
-	at javafx.controls@21.0.1/com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
-	at javafx.controls@21.0.1/com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at javafx.base@21.0.1/com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at javafx.base@21.0.1/com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
-	at javafx.base@21.0.1/javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.graphics@21.0.1/javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
-	at javafx.graphics@21.0.1/javafx.scene.Scene.processMouseEvent(Scene.java:1890)
-	at javafx.graphics@21.0.1/javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
-	at javafx.graphics@21.0.1/com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.View.handleMouseEvent(View.java:551)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.View.notifyMouse(View.java:937)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at javafx.graphics@21.0.1/com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
-	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
-	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:357)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:44)
-	... 64 common frames omitted
-2026-05-12 01:03:59.115 [JavaFX Application Thread] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн видалено: id=9, affected=1
-2026-05-12 01:03:59.115 [JavaFX Application Thread] INFO  c.p.service.DesignServiceImpl - Видалено дизайн: id=9
-2026-05-12 01:04:00.999 [JavaFX Application Thread] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн видалено: id=1, affected=1
-2026-05-12 01:04:00.999 [JavaFX Application Thread] INFO  c.p.service.DesignServiceImpl - Видалено дизайн: id=1
-2026-05-12 01:04:08.184 [JavaFX Application Thread] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн видалено: id=11, affected=1
-2026-05-12 01:04:08.184 [JavaFX Application Thread] INFO  c.p.service.DesignServiceImpl - Видалено дизайн: id=11
-2026-05-12 01:04:13.498 [JavaFX Application Thread] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн видалено: id=10, affected=1
-2026-05-12 01:04:13.499 [JavaFX Application Thread] INFO  c.p.service.DesignServiceImpl - Видалено дизайн: id=10
-2026-05-12 01:04:15.102 [JavaFX Application Thread] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн видалено: id=8, affected=1
-2026-05-12 01:04:15.103 [JavaFX Application Thread] INFO  c.p.service.DesignServiceImpl - Видалено дизайн: id=8
-2026-05-12 01:04:16.720 [JavaFX Application Thread] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн видалено: id=7, affected=1
-2026-05-12 01:04:16.721 [JavaFX Application Thread] INFO  c.p.service.DesignServiceImpl - Видалено дизайн: id=7
-2026-05-12 20:52:05.748 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
-2026-05-12 20:52:05.931 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
-2026-05-12 20:52:06.108 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
-2026-05-12 20:52:06.109 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
-2026-05-12 20:52:06.110 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
-2026-05-12 20:52:06.112 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
-2026-05-12 20:52:06.112 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
-2026-05-12 20:52:06.113 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
-2026-05-12 20:52:06.130 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
-2026-05-12 20:52:06.369 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
-2026-05-12 20:52:06.766 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
-2026-05-12 20:52:12.612 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
-2026-05-12 20:52:27.665 [JavaFX Application Thread] ERROR c.p.repository.DesignRepositoryImpl - Помилка збереження дизайну: not implemented by SQLite JDBC driver
-java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
-	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
-	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:357)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:44)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:21)
-	at com.phonecase.service.DesignServiceImpl.createDesign(DesignServiceImpl.java:53)
-	at com.phonecase.ui.controller.MainController.lambda$showDesignDialog$22(MainController.java:446)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at com.phonecase.ui.controller.MainController.showDesignDialog(MainController.java:443)
-	at com.phonecase.ui.controller.MainController.handleAddDesign(MainController.java:278)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
-	at com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
-	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
-	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
-	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
-	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
-	at javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.scene.Node.fireEvent(Node.java:8875)
-	at javafx.scene.control.Button.fire(Button.java:203)
-	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
-	at com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
-	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
-	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
-	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
-	at javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
-	at javafx.scene.Scene.processMouseEvent(Scene.java:1890)
-	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
-	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
-	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
-	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
-	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
-	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
-	at com.sun.glass.ui.View.handleMouseEvent(View.java:551)
-	at com.sun.glass.ui.View.notifyMouse(View.java:937)
-	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-2026-05-12 20:52:27.667 [JavaFX Application Thread] ERROR c.p.ui.controller.MainController - Помилка збереження дизайну: Не вдалось зберегти дизайн
-java.lang.RuntimeException: Не вдалось зберегти дизайн
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:60)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:21)
-	at com.phonecase.service.DesignServiceImpl.createDesign(DesignServiceImpl.java:53)
-	at com.phonecase.ui.controller.MainController.lambda$showDesignDialog$22(MainController.java:446)
-	at java.base/java.util.Optional.ifPresent(Optional.java:178)
-	at com.phonecase.ui.controller.MainController.showDesignDialog(MainController.java:443)
-	at com.phonecase.ui.controller.MainController.handleAddDesign(MainController.java:278)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at com.sun.javafx.reflect.Trampoline.invoke(MethodUtil.java:72)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at com.sun.javafx.reflect.MethodUtil.invoke(MethodUtil.java:270)
-	at com.sun.javafx.fxml.MethodHelper.invoke(MethodHelper.java:84)
-	at javafx.fxml.FXMLLoader$MethodHandler.invoke(FXMLLoader.java:1855)
-	at javafx.fxml.FXMLLoader$ControllerMethodEventHandler.handle(FXMLLoader.java:1726)
-	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
-	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
-	at javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.scene.Node.fireEvent(Node.java:8875)
-	at javafx.scene.control.Button.fire(Button.java:203)
-	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:207)
-	at com.sun.javafx.scene.control.inputmap.InputMap.handle(InputMap.java:274)
-	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:247)
-	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
-	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:232)
-	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:189)
-	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
-	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
-	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
-	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
-	at javafx.event.Event.fireEvent(Event.java:198)
-	at javafx.scene.Scene$MouseHandler.process(Scene.java:3984)
-	at javafx.scene.Scene.processMouseEvent(Scene.java:1890)
-	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2708)
-	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:411)
-	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:301)
-	at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
-	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$2(GlassViewEventHandler.java:450)
-	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:424)
-	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:449)
-	at com.sun.glass.ui.View.handleMouseEvent(View.java:551)
-	at com.sun.glass.ui.View.notifyMouse(View.java:937)
-	at com.sun.glass.ui.win.WinApplication._runLoop(Native Method)
-	at com.sun.glass.ui.win.WinApplication.lambda$runLoop$3(WinApplication.java:185)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
-	at org.sqlite.jdbc3.JDBC3PreparedStatement.unsupported(JDBC3PreparedStatement.java:448)
-	at org.sqlite.jdbc3.JDBC3Statement.getGeneratedKeys(JDBC3Statement.java:357)
-	at com.phonecase.repository.DesignRepositoryImpl.save(DesignRepositoryImpl.java:44)
-	... 64 common frames omitted
-2026-05-12 20:54:05.442 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
-2026-05-12 20:54:20.591 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
-2026-05-12 22:01:09.351 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
-2026-05-12 22:01:09.511 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
-2026-05-12 22:01:09.678 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
-2026-05-12 22:01:09.679 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
-2026-05-12 22:01:09.680 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
-2026-05-12 22:01:09.682 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
-2026-05-12 22:01:09.683 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
-2026-05-12 22:01:09.683 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
-2026-05-12 22:01:09.696 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
-2026-05-12 22:01:09.865 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
-2026-05-12 22:01:10.152 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
-2026-05-12 22:01:12.183 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: ivan
-2026-05-12 22:01:32.298 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
-2026-05-12 22:01:37.178 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: serhiy
-2026-05-12 22:01:52.073 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 01:06:23.880 [JavaFX Application Thread] ERROR c.p.ui.controller.RegisterController - Помилка реєстрації: Не вдалось зберегти користувача
+2026-05-14 01:12:02.869 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
+2026-05-14 01:12:03.024 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
+2026-05-14 01:12:03.190 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
+2026-05-14 01:12:03.190 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
+2026-05-14 01:12:03.191 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
+2026-05-14 01:12:03.193 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
+2026-05-14 01:12:03.194 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
+2026-05-14 01:12:03.194 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
+2026-05-14 01:12:03.207 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
+2026-05-14 01:12:03.367 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 01:12:03.637 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
+2026-05-14 01:12:07.641 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
+2026-05-14 01:12:09.061 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 01:12:22.486 [Thread-5] INFO  c.phonecase.service.UserServiceImpl - Зареєстровано нового користувача: test
+2026-05-14 01:12:25.762 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 01:12:28.892 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: test
+2026-05-14 01:12:35.993 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 01:12:39.347 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 01:18:09.037 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
+2026-05-14 01:18:09.201 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
+2026-05-14 01:18:09.391 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
+2026-05-14 01:18:09.391 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
+2026-05-14 01:18:09.393 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
+2026-05-14 01:18:09.395 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
+2026-05-14 01:18:09.395 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
+2026-05-14 01:18:09.395 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
+2026-05-14 01:18:09.408 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
+2026-05-14 01:18:09.566 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 01:18:09.840 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
+2026-05-14 01:19:37.069 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 01:21:22.076 [JavaFX Application Thread] ERROR c.p.ui.controller.RegisterController - Помилка реєстрації: Невірний формат email: 123123
+2026-05-14 01:21:26.033 [JavaFX Application Thread] ERROR c.p.ui.controller.RegisterController - Помилка реєстрації: Невірний формат email: 123123@
+2026-05-14 01:21:30.804 [JavaFX Application Thread] ERROR c.p.ui.controller.RegisterController - Помилка реєстрації: Невірний формат email: 123123@gg
+2026-05-14 01:25:51.504 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 01:26:00.834 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
+2026-05-14 01:26:03.446 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 01:26:07.814 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: test
+2026-05-14 01:34:32.087 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
+2026-05-14 01:34:32.250 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
+2026-05-14 01:34:32.430 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
+2026-05-14 01:34:32.431 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
+2026-05-14 01:34:32.432 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
+2026-05-14 01:34:32.434 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
+2026-05-14 01:34:32.434 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
+2026-05-14 01:34:32.434 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
+2026-05-14 01:34:32.447 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
+2026-05-14 01:34:32.606 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 01:34:32.870 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
+2026-05-14 01:34:37.815 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
+2026-05-14 01:34:54.243 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 01:34:58.735 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: test
+2026-05-14 01:36:07.603 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 01:36:11.541 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
