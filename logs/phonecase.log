@@ -241,3 +241,38 @@ java.sql.SQLFeatureNotSupportedException: not implemented by SQLite JDBC driver
 2026-05-14 14:01:40.319 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
 2026-05-14 14:01:48.965 [JavaFX Application Thread] INFO  c.phonecase.service.OrderServiceImpl - Статус замовлення #2 змінено на Скасовано
 2026-05-14 14:02:06.094 [JavaFX Application Thread] INFO  c.phonecase.service.OrderServiceImpl - Статус замовлення #1 змінено на Відправлено
+2026-05-14 14:14:19.523 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
+2026-05-14 14:14:19.721 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
+2026-05-14 14:14:19.900 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
+2026-05-14 14:14:19.900 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
+2026-05-14 14:14:19.901 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
+2026-05-14 14:14:19.904 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
+2026-05-14 14:14:19.904 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
+2026-05-14 14:14:19.904 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
+2026-05-14 14:14:19.917 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
+2026-05-14 14:14:20.092 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 14:14:20.373 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
+2026-05-14 14:14:25.192 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
+2026-05-14 14:18:37.166 [JavaFX-Launcher] INFO  com.phonecase.App - Ініціалізація застосунку PhoneCase Manager...
+2026-05-14 14:18:37.325 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
+2026-05-14 14:18:37.504 [JavaFX-Launcher] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
+2026-05-14 14:18:37.504 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Ініціалізація схеми бази даних...
+2026-05-14 14:18:37.505 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - DDL виконано успішно.
+2026-05-14 14:18:37.507 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Тестові дані вже існують — пропускаємо seed.
+2026-05-14 14:18:37.508 [JavaFX-Launcher] INFO  c.p.config.DatabaseInitializer - Схема та початкові дані успішно ініціалізовано.
+2026-05-14 14:18:37.508 [JavaFX-Launcher] INFO  com.phonecase.App - DI-контейнер та БД ініціалізовано успішно.
+2026-05-14 14:18:37.521 [JavaFX Application Thread] INFO  com.phonecase.App - Запуск головного вікна...
+2026-05-14 14:18:37.686 [JavaFX Application Thread] DEBUG c.p.ui.controller.LoginController - LoginController ініціалізовано.
+2026-05-14 14:18:37.997 [JavaFX Application Thread] INFO  com.phonecase.App - Застосунок запущено.
+2026-05-14 14:18:42.568 [JavaFX Application Thread] INFO  c.p.ui.controller.LoginController - Успішний вхід: admin
+2026-05-14 14:20:23.130 [JavaFX Application Thread] INFO  c.phonecase.service.OrderServiceImpl - Створено замовлення: id=1, userId=1, total=289.99
+2026-05-14 14:25:50.108 [Thread-8] INFO  c.p.service.ReportServiceImpl - Excel-звіт з дизайнами збережено: C:\Users\Winpala\Desktop\designs_report.xlsx
+2026-05-14 14:44:02.204 [JavaFX Application Thread] INFO  c.phonecase.service.OrderServiceImpl - Статус замовлення #1 змінено на Підтверджено
+2026-05-14 14:44:11.949 [JavaFX Application Thread] INFO  c.phonecase.service.OrderServiceImpl - Статус замовлення #1 змінено на Отримано
+2026-05-14 15:05:00.900 [main] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
+2026-05-14 15:05:01.034 [main] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
+2026-05-14 15:05:02.088 [main] INFO  c.p.service.DesignServiceImpl - Створено новий дизайн: id=100, name=Новий дизайн
+2026-05-14 15:05:02.144 [main] INFO  c.p.service.DesignServiceImpl - Видалено дизайн: id=1
+2026-05-14 15:05:02.208 [main] WARN  c.phonecase.service.UserServiceImpl - Спроба входу з порожніми даними.
+2026-05-14 15:05:02.236 [main] WARN  c.phonecase.service.UserServiceImpl - Спроба входу з порожніми даними.
+2026-05-14 15:05:02.243 [main] INFO  c.phonecase.service.UserServiceImpl - Зареєстровано нового користувача: newuser

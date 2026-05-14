@@ -1,4 +1,45 @@
 -------------------------------------------------------------------------------
 Test set: com.phonecase.repository.DesignRepositoryImplTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.628 s -- in com.phonecase.repository.DesignRepositoryImplTest
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.544 s <<< FAILURE! -- in com.phonecase.repository.DesignRepositoryImplTest
+com.phonecase.repository.DesignRepositoryImplTest -- Time elapsed: 0.544 s <<< ERROR!
+java.lang.RuntimeException: Помилка збереження категорії
+	at com.phonecase.repository.CategoryRepositoryImpl.save(CategoryRepositoryImpl.java:38)
+	at com.phonecase.repository.DesignRepositoryImplTest.seedCategories(DesignRepositoryImplTest.java:118)
+	at com.phonecase.repository.DesignRepositoryImplTest.setup(DesignRepositoryImplTest.java:54)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Функция "LAST_INSERT_ROWID" не найдена
+Function "LAST_INSERT_ROWID" not found; SQL statement:
+SELECT last_insert_rowid() [90022-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.readFunction(Parser.java:3786)
+	at org.h2.command.Parser.readTermWithIdentifier(Parser.java:5148)
+	at org.h2.command.Parser.readTerm(Parser.java:4834)
+	at org.h2.command.Parser.readFactor(Parser.java:3337)
+	at org.h2.command.Parser.readSum(Parser.java:3324)
+	at org.h2.command.Parser.readConcat(Parser.java:3289)
+	at org.h2.command.Parser.readCondition(Parser.java:3079)
+	at org.h2.command.Parser.readExpression(Parser.java:2999)
+	at org.h2.command.Parser.parseSelectExpressions(Parser.java:2799)
+	at org.h2.command.Parser.parseSelect(Parser.java:2817)
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2708)
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2564)
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2543)
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2536)
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2529)
+	at org.h2.command.Parser.parseQuery(Parser.java:2498)
+	at org.h2.command.Parser.parsePrepared(Parser.java:627)
+	at org.h2.command.Parser.parse(Parser.java:592)
+	at org.h2.command.Parser.parse(Parser.java:564)
+	at org.h2.command.Parser.prepareCommand(Parser.java:483)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:94)
+	at com.phonecase.repository.CategoryRepositoryImpl.save(CategoryRepositoryImpl.java:33)
+	... 4 more
+

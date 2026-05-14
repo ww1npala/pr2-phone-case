@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.phonecase.repository.DesignRepositoryImplTest" time="0.628" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.phonecase.repository.DesignRepositoryImplTest" time="0.544" tests="1" errors="1" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="18"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-18.0.2.1\bin"/>
-    <property name="sun.java.command" value="C:\Users\Winpala\AppData\Local\Temp\surefire6579772783182072137\surefirebooter-20260514004648866_3.jar C:\Users\Winpala\AppData\Local\Temp\surefire6579772783182072137 2026-05-14T00-46-47_838-jvmRun1 surefire-20260514004648866_1tmp surefire_0-20260514004648866_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Winpala\AppData\Local\Temp\surefire17536478327504597866\surefirebooter-20260514150500072_3.jar C:\Users\Winpala\AppData\Local\Temp\surefire17536478327504597866 2026-05-14T15-04-59_919-jvmRun1 surefire-20260514150500072_1tmp surefire_0-20260514150500072_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Winpala\IdeaProjects\practice\target\test-classes;C:\Users\Winpala\IdeaProjects\practice\target\classes;C:\Users\Winpala\.m2\repository\org\openjfx\javafx-controls\21.0.1\javafx-controls-21.0.1.jar;C:\Users\Winpala\.m2\repository\org\openjfx\javafx-controls\21.0.1\javafx-controls-21.0.1-win.jar;C:\Users\Winpala\.m2\repository\org\openjfx\javafx-graphics\21.0.1\javafx-graphics-21.0.1.jar;C:\Users\Winpala\.m2\repository\org\openjfx\javafx-graphics\21.0.1\javafx-graphics-21.0.1-win.jar;C:\Users\Winpala\.m2\repository\org\openjfx\javafx-base\21.0.1\javafx-base-21.0.1.jar;C:\Users\Winpala\.m2\repository\org\openjfx\javafx-base\21.0.1\javafx-base-21.0.1-win.jar;C:\Users\Winpala\.m2\repository\org\openjfx\javafx-fxml\21.0.1\javafx-fxml-21.0.1.jar;C:\Users\Winpala\.m2\repository\org\openjfx\javafx-fxml\21.0.1\javafx-fxml-21.0.1-win.jar;C:\Users\Winpala\.m2\repository\org\xerial\sqlite-jdbc\3.43.0.0\sqlite-jdbc-3.43.0.0.jar;C:\Users\Winpala\.m2\repository\com\google\inject\guice\5.1.0\guice-5.1.0.jar;C:\Users\Winpala\.m2\repository\javax\inject\javax.inject\1\javax.inject-1.jar;C:\Users\Winpala\.m2\repository\aopalliance\aopalliance\1.0\aopalliance-1.0.jar;C:\Users\Winpala\.m2\repository\com\google\guava\guava\30.1-jre\guava-30.1-jre.jar;C:\Users\Winpala\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\Winpala\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\Winpala\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\Winpala\.m2\repository\org\checkerframework\checker-qual\3.5.0\checker-qual-3.5.0.jar;C:\Users\Winpala\.m2\repository\com\google\errorprone\error_prone_annotations\2.3.4\error_prone_annotations-2.3.4.jar;C:\Users\Winpala\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\Winpala\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\Winpala\.m2\repository\org\apache\poi\poi-ooxml\5.2.4\poi-ooxml-5.2.4.jar;C:\Users\Winpala\.m2\repository\org\apache\poi\poi\5.2.4\poi-5.2.4.jar;C:\Users\Winpala\.m2\repository\commons-codec\commons-codec\1.16.0\commons-codec-1.16.0.jar;C:\Users\Winpala\.m2\repository\org\apache\commons\commons-math3\3.6.1\commons-math3-3.6.1.jar;C:\Users\Winpala\.m2\repository\com\zaxxer\SparseBitSet\1.3\SparseBitSet-1.3.jar;C:\Users\Winpala\.m2\repository\org\apache\poi\poi-ooxml-lite\5.2.4\poi-ooxml-lite-5.2.4.jar;C:\Users\Winpala\.m2\repository\org\apache\xmlbeans\xmlbeans\5.1.1\xmlbeans-5.1.1.jar;C:\Users\Winpala\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\Winpala\.m2\repository\commons-io\commons-io\2.13.0\commons-io-2.13.0.jar;C:\Users\Winpala\.m2\repository\com\github\virtuald\curvesapi\1.08\curvesapi-1.08.jar;C:\Users\Winpala\.m2\repository\org\apache\logging\log4j\log4j-api\2.20.0\log4j-api-2.20.0.jar;C:\Users\Winpala\.m2\repository\org\apache\commons\commons-collections4\4.4\commons-collections4-4.4.jar;C:\Users\Winpala\.m2\repository\org\slf4j\slf4j-api\2.0.9\slf4j-api-2.0.9.jar;C:\Users\Winpala\.m2\repository\ch\qos\logback\logback-classic\1.4.11\logback-classic-1.4.11.jar;C:\Users\Winpala\.m2\repository\ch\qos\logback\logback-core\1.4.11\logback-core-1.4.11.jar;C:\Users\Winpala\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.0\junit-jupiter-5.10.0.jar;C:\Users\Winpala\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\Winpala\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Winpala\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\Winpala\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Winpala\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\Winpala\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\Winpala\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\Winpala\.m2\repository\org\mockito\mockito-junit-jupiter\5.6.0\mockito-junit-jupiter-5.6.0.jar;C:\Users\Winpala\.m2\repository\org\mockito\mockito-core\5.6.0\mockito-core-5.6.0.jar;C:\Users\Winpala\.m2\repository\net\bytebuddy\byte-buddy\1.14.8\byte-buddy-1.14.8.jar;C:\Users\Winpala\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.8\byte-buddy-agent-1.14.8.jar;C:\Users\Winpala\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Winpala\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Winpala\AppData\Local\Temp\surefire6579772783182072137\surefirebooter-20260514004648866_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Winpala\AppData\Local\Temp\surefire17536478327504597866\surefirebooter-20260514150500072_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="18.0.2.1+1-1"/>
@@ -56,34 +56,49 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="62.0"/>
   </properties>
-  <testcase name="testSaveDesign" classname="com.phonecase.repository.DesignRepositoryImplTest" time="0.034">
-    <system-out><![CDATA[00:46:49.560 [main] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
-00:46:49.712 [main] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
-00:46:49.941 [main] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн збережено: id=1, name=Тестовий дизайн
+  <testcase name="" classname="com.phonecase.repository.DesignRepositoryImplTest" time="0.544">
+    <error message="Помилка збереження категорії" type="java.lang.RuntimeException"><![CDATA[java.lang.RuntimeException: Помилка збереження категорії
+	at com.phonecase.repository.CategoryRepositoryImpl.save(CategoryRepositoryImpl.java:38)
+	at com.phonecase.repository.DesignRepositoryImplTest.seedCategories(DesignRepositoryImplTest.java:118)
+	at com.phonecase.repository.DesignRepositoryImplTest.setup(DesignRepositoryImplTest.java:54)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Функция "LAST_INSERT_ROWID" не найдена
+Function "LAST_INSERT_ROWID" not found; SQL statement:
+SELECT last_insert_rowid() [90022-224]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:644)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.command.Parser.readFunction(Parser.java:3786)
+	at org.h2.command.Parser.readTermWithIdentifier(Parser.java:5148)
+	at org.h2.command.Parser.readTerm(Parser.java:4834)
+	at org.h2.command.Parser.readFactor(Parser.java:3337)
+	at org.h2.command.Parser.readSum(Parser.java:3324)
+	at org.h2.command.Parser.readConcat(Parser.java:3289)
+	at org.h2.command.Parser.readCondition(Parser.java:3079)
+	at org.h2.command.Parser.readExpression(Parser.java:2999)
+	at org.h2.command.Parser.parseSelectExpressions(Parser.java:2799)
+	at org.h2.command.Parser.parseSelect(Parser.java:2817)
+	at org.h2.command.Parser.parseQueryPrimary(Parser.java:2708)
+	at org.h2.command.Parser.parseQueryTerm(Parser.java:2564)
+	at org.h2.command.Parser.parseQueryExpressionBody(Parser.java:2543)
+	at org.h2.command.Parser.parseQueryExpressionBodyAndEndOfQuery(Parser.java:2536)
+	at org.h2.command.Parser.parseQueryExpression(Parser.java:2529)
+	at org.h2.command.Parser.parseQuery(Parser.java:2498)
+	at org.h2.command.Parser.parsePrepared(Parser.java:627)
+	at org.h2.command.Parser.parse(Parser.java:592)
+	at org.h2.command.Parser.parse(Parser.java:564)
+	at org.h2.command.Parser.prepareCommand(Parser.java:483)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:639)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:559)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1166)
+	at org.h2.jdbc.JdbcStatement.executeQuery(JdbcStatement.java:94)
+	at com.phonecase.repository.CategoryRepositoryImpl.save(CategoryRepositoryImpl.java:33)
+	... 4 more
+]]></error>
+    <system-out><![CDATA[15:05:00.900 [main] INFO  c.p.config.DatabaseConnection - Ініціалізація пулу з'єднань: jdbc:sqlite:phonecase.db
+15:05:01.034 [main] INFO  c.p.config.DatabaseConnection - Пул з'єднань створено (5 з'єднань).
 ]]></system-out>
   </testcase>
-  <testcase name="testFindById" classname="com.phonecase.repository.DesignRepositoryImplTest" time="0.003">
-    <system-out><![CDATA[00:46:49.958 [main] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн збережено: id=2, name=Дизайн для пошуку
-]]></system-out>
-  </testcase>
-  <testcase name="testFindByIdNotFound" classname="com.phonecase.repository.DesignRepositoryImplTest" time="0.002"/>
-  <testcase name="testFindAll" classname="com.phonecase.repository.DesignRepositoryImplTest" time="0.003"/>
-  <testcase name="testUpdateDesign" classname="com.phonecase.repository.DesignRepositoryImplTest" time="0.005">
-    <system-out><![CDATA[00:46:49.968 [main] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн збережено: id=3, name=Дизайн до оновлення
-00:46:49.971 [main] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн оновлено: id=3
-]]></system-out>
-  </testcase>
-  <testcase name="testDeleteDesign" classname="com.phonecase.repository.DesignRepositoryImplTest" time="0.003">
-    <system-out><![CDATA[00:46:49.973 [main] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн збережено: id=4, name=Дизайн для видалення
-00:46:49.974 [main] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн видалено: id=4, affected=1
-]]></system-out>
-  </testcase>
-  <testcase name="testSearchByName" classname="com.phonecase.repository.DesignRepositoryImplTest" time="0.011">
-    <system-out><![CDATA[00:46:49.977 [main] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн збережено: id=5, name=Гірський пейзаж
-00:46:49.978 [main] DEBUG c.p.repository.DesignRepositoryImpl - Дизайн збережено: id=6, name=Морський захід
-]]></system-out>
-  </testcase>
-  <testcase name="testCount" classname="com.phonecase.repository.DesignRepositoryImplTest" time="0.002"/>
-  <testcase name="testBuilderValidation" classname="com.phonecase.repository.DesignRepositoryImplTest" time="0.001"/>
-  <testcase name="testBuilderNegativePrice" classname="com.phonecase.repository.DesignRepositoryImplTest" time="0.002"/>
 </testsuite>
